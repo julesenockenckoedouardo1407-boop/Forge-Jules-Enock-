@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="FORGE Jules Enock — une application qui se transforme selon ce que vous lui demandez.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<title>FORGE Jules Enock</title>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div>
+      <div class="brand">FORGE</div>
+      <div class="subtitle">Jules Enock · V1</div>
+    </div>
+    <button id="aboutBtn" class="icon-btn" aria-label="À propos">ⓘ</button>
+  </header>
+
+  <main id="main">
+    <section id="home" class="view active">
+      <div class="hero">
+        <div class="forge-mark">⚒</div>
+        <h1>Que veux-tu que je sois ?</h1>
+        <p>Écris un rôle. FORGE construit l'outil correspondant parmi les rôles disponibles dans cette V1.</p>
+      </div>
+
+      <form id="forgeForm" class="command-box">
+        <textarea id="command" rows="3" autocomplete="off"
+          placeholder="Ex. : Sois une calculatrice"></textarea>
+        <button type="submit">FORGER <span>→</span></button>
+      </form>
+
+      <div class="examples">
+        <div class="section-label">Essaie par exemple</div>
+        <div class="chips">
+          <button data-command="Sois une calculatrice">🧮 Calculatrice</button>
+          <button data-command="Sois un bloc reçu">🧾 Bloc reçu</button>
+          <button data-command="Sois un cahier de préparation">📒 Cahier</button>
+          <button data-command="Sois un générateur de texte">✍️ Générateur de texte</button>
+          <button data-command="Sois mon professeur de mathématiques">👨‍🏫 Prof de maths</button>
+        </div>
+      </div>
+
+      <div class="notice">
+        <strong>V1 honnête :</strong> FORGE ne prétend pas devenir n'importe quel logiciel.
+        Il reconnaît actuellement cinq rôles réels et fonctionnels.
+      </div>
+    </section>
+
+    <section id="forgeView" class="view">
+      <div class="rolebar">
+        <button id="backBtn" class="back-btn">← Accueil</button>
+        <div>
+          <div id="roleTitle" class="role-title"></div>
+          <div id="roleHint" class="role-hint"></div>
+        </div>
+        <button id="changeRoleBtn" class="small-btn">Changer</button>
+      </div>
+      <div id="roleContent"></div>
+    </section>
+  </main>
+
+  <div id="aboutModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="closeAbout" class="close">×</button>
+      <div class="forge-mark small">⚒</div>
+      <h2>FORGE Jules Enock</h2>
+      <p><strong>V1</strong> — Une application caméléon : vous lui donnez un rôle, elle construit l'outil correspondant.</p>
+      <p>Cette version fonctionne hors ligne et mémorise localement votre dernier rôle et vos données de travail.</p>
+      <hr>
+      <p><strong>Créé par maître Jules Enock</strong><br>Contact : +509 40409680</p>
+      <p class="muted">Aucune commande envoyée à un serveur dans cette V1.</p>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
