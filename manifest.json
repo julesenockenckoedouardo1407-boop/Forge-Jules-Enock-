@@ -1,13 +1,17 @@
 {
   "name": "FORGE Jules Enock",
   "short_name": "FORGE",
-  "description": "Une application caméléon qui adopte différents rôles fonctionnels.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#080b12",
+  "background_color": "#0b1020",
   "theme_color": "#111827",
-  "orientation": "portrait",
+  "lang": "fr",
   "icons": [
-    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
   ]
 }
